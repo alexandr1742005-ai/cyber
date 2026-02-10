@@ -2,11 +2,7 @@ const welcomeElement = document.getElementById('welcome-text');
 const terminalOutput = document.getElementById('terminal-output');
 const commandInput = document.getElementById('command-input');
 
-// Приветствие
-const username = 'Ravshanov';
-welcomeElement.textContent = `Welcome back, ${username}`;
-
-// Системный монитор (эмуляция)
+// Системный монитор
 setInterval(() => {
     const cpu = Math.floor(Math.random() * 100);
     const ram = Math.floor(Math.random() * 100);
@@ -24,9 +20,9 @@ commandInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         const cmd = commandInput.value.trim();
         terminalOutput.innerHTML += `<div>> ${cmd}</div>`;
-
+        
         if (cmd === 'help') {
-            terminalOutput.innerHTML += `<div>Available commands: help, clear, sysinfo</div>`;
+            terminalOutput.innerHTML += `<div>Available: help, clear, sysinfo</div>`;
         } else if (cmd === 'sysinfo') {
             terminalOutput.innerHTML += `<div>CPU: 45%, RAM: 60%, DISK: 30%</div>`;
         } else if (cmd === 'clear') {
