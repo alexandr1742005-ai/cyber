@@ -1,0 +1,73 @@
+body {
+    background: #000;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr 150px;
+    gap: 20px;
+    height: 100vh;
+}
+
+.panel {
+    border: 1px solid #00ff41;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+.map {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background: url('https://i.imgur.com/3GxqE1u.png') center/cover;
+    border: 1px solid #00ff41;
+    position: relative;
+}
+
+.welcome {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00ff41;
+}
+
+.terminal {
+    grid-column: 2;
+    grid-row: 2;
+    background: #000;
+    border: 1px solid #00ff41;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    color: #00ff41;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: #00ff41;
+    margin-right: 10px;
+}
+
+.command-input {
+    background: transparent;
+    border: none;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    width: 100%;
+    outline: none;
+}

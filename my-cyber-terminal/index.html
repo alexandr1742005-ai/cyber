@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="map" id="map"></div>
+
+        <div class="panel welcome">
+            <div id="welcome-text"></div>
+        </div>
+
+        <div class="panel terminal" id="terminal-output">
+            <div>> Welcome to Cyber Terminal</div>
+            <div>> Type 'help' for commands</div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 20px; right: 20px; display: flex; gap: 20px; color: #00ff41;">
+        <div id="cpu">CPU: 0%</div>
+        <div id="ram">RAM: 0%</div>
+        <div id="disk">DISK: 0%</div>
+    </div>
+
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 10px;">
+        <div class="input-line">
+            <span class="prompt">></span>
+            <input type="text" class="command-input" id="command-input" placeholder="Enter command...">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
